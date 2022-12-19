@@ -112,6 +112,7 @@ header {
   position: relative;
   margin-right: 50px;
   padding-bottom: 32px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-nav-link:hover,
@@ -146,6 +147,7 @@ header {
   text-decoration: none;
 
   margin-right: 40px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -219,7 +221,15 @@ h1 {
 .list.advantages-flex > li:last-child {
   margin-right: 0;
 }
-
+.advantages-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  background-color: var(--main-background-color);
+}
 .topic {
   color: var(--topic-color);
   font-size: 14px;
@@ -249,14 +259,30 @@ h1 {
 .list.promo-image > li:not(:last-child) {
   margin-right: 30px;
 }
-.advantages-icon {
+.thumb {
+  position: relative;
+}
+.thumb-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  height: 70px;
+  width: 100%;
+  background-color: rgba(47, 48, 58, 0.8);
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
-  width: 270px;
-  height: 120px;
-  background-color: var(--main-background-color);
+  justify-content: center;
+}
+.thumb-text {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-background-color-second);
 }
 /* Our team section */
 .team {
@@ -273,7 +299,6 @@ h1 {
 .team-list {
   display: flex;
   justify-content: space-around;
-  /* gap: 30px; */
 }
 
 .team-card {
@@ -310,7 +335,7 @@ h1 {
 
 .social-media-list {
   display: flex;
-  /* justify-content: space-between; */
+
   align-items: center;
   gap: 10px;
   padding-right: 32px;
@@ -327,11 +352,13 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  border-radius: 50%;
   width: 100%;
   height: 100%;
 
   fill: #afb1b8;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-media-link:hover,
 .social-media-link:focus {
@@ -368,6 +395,7 @@ h1 {
   fill: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -411,6 +439,8 @@ footer {
 
   width: 100%;
   height: 100%;
+  border-radius: 50%;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -442,6 +472,7 @@ footer {
   font-size: 14px;
   line-height: 1.7;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link-second:hover,
 .footer-link-second:focus {
@@ -485,6 +516,8 @@ footer {
   padding-left: 22px;
   border-radius: 4px;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .secondary-button:hover,
 .secondary-button:focus {
@@ -511,6 +544,7 @@ footer {
   text-decoration: none;
   width: 100%;
   height: 100%;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
